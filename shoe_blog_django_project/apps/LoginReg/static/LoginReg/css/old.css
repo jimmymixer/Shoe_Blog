@@ -1,0 +1,180 @@
+
+*{
+  /*border: 1px dotted red;*/
+}
+body{
+  background-image: url("/static/LoginReg/images/canvas.jpeg");
+  background-repeat:no-repeat;
+  /*background-position: center center;*/*/
+  position: fixed;
+  background-size: cover;
+  color: white;
+  max-height: 100%;
+  width: auto;
+  padding: 25px;
+}
+/*.reg-background{
+  background-image: url("/static/LoginReg/images/canvas.jpeg");
+  /*background-repeat:no-repeat;
+  background-position: center center;*/
+  position: static;
+  background-size: 100% auto;
+  color: white;
+  height: 100%;
+  padding: 25px;
+}*/
+/*.log-background{
+  background-image: url("/static/LoginReg/images/canvas.jpeg");
+  /*background-repeat:no-repeat;
+  background-position: center center;*/
+  background-size: 100% auto;
+  color: white;
+  height: 100%;
+  padding: 25px;
+}*/
+.left{
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 50px;
+}
+.right{
+  display: inline-block;
+  vertical-align: top;
+}
+input[type=submit]{
+  /*background-color: #4CAF50;*/
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+form{
+  /*background-color: #4CAF50;*/
+  border: none;
+  color: black;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.title{
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 70px;
+  float: left;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.title-row{
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-top: -23px;
+  padding-right: 35px;
+  padding-left: 35px;
+
+}
+.title-row2{
+  margin-top: 50px;
+}
+.col-md-7 {
+    width: 71% !important;
+}
+.cntr{
+  text-align: center;
+  clear: both;
+}
+.cntr-one{
+  text-align: right;
+}
+.cntr-two{
+  text-align: left;
+}
+.rprocess{
+  margin-right: 190px;
+}
+.lprocess{
+  margin-left: 85px;
+}
+.lform{
+  padding-right: 270px;
+  text-align: right;
+}
+.a-login{
+  float: right;
+  padding: 3px 20px;
+  margin-right: 50px;
+  margin-top: 35px;
+  color: white;
+  background-color: Transparent;
+  border: 1px solid rgba(255,255,255,0.77);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 0px;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  /*opacity: .5*/
+}
+.form-button{
+  float: right;
+  padding: 3px 20px;
+  margin-right: 50px;
+  margin-top: 35px;
+  color: white;
+  background-color: Transparent;
+  border: 1px solid rgba(255,255,255,0.77) !important;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 0px;
+  line-height: 22px;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  /*opacity: .5*/
+  text-shadow: none !important;
+}
+.field-container{
+  width: 50%;
+}
+.field-height{
+  height: 30px;
+}
+input{
+  box-shadow: 2px 2px 5px #914911;
+}
+.reg-title{
+  margin-right: auto;
+}
+/*.para{
+  margin-right: 20px;
+}*/
+.title-quote{
+  font-family: 'Dancing Script', cursive;
+  font-size:30px;
+  margin: 0px;
+  margin-left: 350px;
+}
+.title-quote2{
+  font-family: 'Dancing Script', cursive;
+  font-size:30px;
+  margin: -21px;
+  margin-left: 100px;
+}
+.pls-reg{
+  margin-top: 50px;
+}
+.input-tag{
+  color: white;
+  text-shadow: 2px 2px 5px #914911;
+}
+footer {
+    display: block;
+}

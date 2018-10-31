@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Creative - Start Bootstrap Theme</title>
+
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'LoginReg/css/creative.css' %}">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Date field for firefox -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//cdn.jsdelivr.net/webshim/1.14.5/polyfiller.js"></script>
+    <script>
+      webshims.setOptions('forms-ext', {types: 'date'});
+      webshims.polyfill('forms forms-ext');
+      $.webshims.formcfg = {
+        en: {
+          dFormat: '-',
+          dateSigns: '-',
+          patterns: {
+            d: "yy-mm-dd"
+          }
+        }
+      };
+    </script>
+
+  </head>
+
+  <body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+          </button>
+          <a class="navbar-brand page-scroll" href="#page-top" style="color:#777;;">james choo  |  mens shoe blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a class="page-scroll" href="#about">About</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#testimonials">Testimonials</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#contact">Contact</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#loginreg" >Login</a>
+            </li>
+            <li>
+              <a class="page-scroll" href="#loginreg">Register</a>
+            </li>
+          </ul>
+        </div>
+          <!-- /.navbar-collapse -->
+      </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+      <div class="header-content">
+        <div class="header-content-inner">
+          <h1 id="homeHeading" class="txt-shadow">"There are two things you can</h1>
+          <h1 id="homeHeading" class="txt-shadow">never have to many enough of,</h1>
+          <h1 id="homeHeading" class="txt-shadow">Good friends,2 Good shoes"</h1><br>
+          <h1 id="homeHeading" class="txt-shadow">- Bull Boxer </h1>
+          <hr>
+          <p class="txt-shadow sm-title">Men's shoe blog</p>
+          <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">We are a blog with a passion for men's shoes</h2>
+            <hr class="light">
+            <p class="text-faded">Join us for the latest fashion trends for men's shoes.  Tips from users just like you and professionals alike.  Also finding the best price for the shoes on the blog.  Find all the accessories you may or may not have discovered for shoes.</p>
+            <a href="#loginreg" class="page-scroll btn btn-default btn-xl sr-button">Get Started!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Testimonials</h2>
+            <hr class="primary">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
+              <h3>Classy</h3>
+              <p class="text-muted">Nice selection of really nice classy shoes.  Not just talking about every shoe in a catalog</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
+              <h3>Best resource for shoes</h3>
+              <p class="text-muted">Just a wide variety of shoes from all over the world.  Pretty cool.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
+              <h3>Found the best price</h3>
+              <p class="text-muted">Although, you can't buy from this site.  This place will show you the links to be able to get them.  Just saved 20% from the other retails stores.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center">
+            <div class="service-box">
+              <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
+              <h3>Made with Love</h3>
+              <p class="text-muted">Beautifil Website, easy to navigate around.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Reg -->
+    <section id="loginreg">
+    <div class="login-registration" id="loginreg">
+    <!-- Reg begin -->
+    <div class="col-lg-6 text-center reg-left">
+    <div class="reg-container">
+  		<div class="row">
+  			<div class="panel panel-primary">
+  				<div class="panel-body">
+  					<form method="POST" action="r_process" role="form">
+              {% csrf_token %}
+  						<div class="form-group">
+  							<h2 class="loginReg-h2">Create account</h2>
+  						</div>
+  						<div class="form-group">
+  							<label class="control-label" for="signupName">Your name</label>
+  							<input id="signupName" type="text" name="name" maxlength="50" class="form-control">
+  						</div>
+              <div class="form-group">
+                <label class="control-label" for="alias">Alias</label>
+                <input id="signupAlias" type="text" name="alias" maxlength="50" class="form-control">
+              </div>
+  						<div class="form-group">
+  							<label class="control-label" for="signupEmail">Email</label>
+  							<input id="signupEmail" type="email" name="email" maxlength="50" class="form-control">
+  						</div>
+              <div class="form-group">
+  							<label class="control-label" for="signupBirthDate">Birth Date</label>
+  							<input id="signupBirthDate" type="date" name="birth_date" class="form-control">
+  						</div>
+  						<div class="form-group">
+  							<label class="control-label" for="signupPassword">Password</label>
+  							<input id="signupPassword" type="password" name="pass" maxlength="25" class="form-control" placeholder="at least 6 characters" length="40">
+  						</div>
+  						<div class="form-group">
+  							<label class="control-label" for="signupPasswordagain">Password again</label>
+  							<input id="signupConfirmPassword" type="password" name="c_pass" maxlength="25" class="form-control">
+  						</div>
+  						<div class="form-group">
+  							<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
+  						</div>
+  						<p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
+  						<hr>
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+	  </div>
+    </div>
+
+    <!-- Login begin -->
+    <div class="col-lg-6 text-center log-right">
+    <div class="log-container">
+  		<div class="row">
+  			<div class="panel panel-primary">
+  				<div class="panel-body">
+  					<form method="POST" action="l_process" role="form">
+              {% csrf_token %}
+  						<div class="form-group">
+  							<h2 class="loginReg-h2">Login</h2>
+  						</div>
+  						<div class="form-group">
+  							<label class="control-label" for="signupName">Alias</label></label>
+  							<input id="signinAlias" type="text" name="alias" maxlength="50" class="form-control">
+  						</div>
+  						<div class="form-group">
+  							<label class="control-label" for="signupEmail">Email</label>
+  							<input id="signinEmail" type="email" name="email" maxlength="50" class="form-control">
+  						</div>
+  						<div class="form-group">
+  							<label class="control-label" for="signupPassword">Password</label>
+  							<input id="signinPassword" type="password" name="pass" maxlength="25" class="form-control" placeholder="at least 6 characters" length="40">
+  						</div>
+  						<div class="form-group">
+  							<button id="signupSubmit" type="submit" class="btn btn-info btn-block">Create your account</button>
+  						</div>
+  						<p class="form-group">By creating an account, you agree to our <a href="#">Terms of Use</a> and our <a href="#">Privacy Policy</a>.</p>
+  						<hr>
+  					</form>
+  				</div>
+  			</div>
+  		</div>
+	  </div>
+    </div>
+
+    </div>
+    </section>
+    <!-- Login Reg end -->
+
+    <!-- Footer -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">Have Questions? Get In Touch!</h2>
+            <hr class="primary">
+            <p></p>
+          </div>
+          <div class="col-lg-4 col-lg-offset-2 text-center">
+            <i class="fa fa-phone fa-3x sr-contact"></i>
+            <p>781.571.9437</p>
+          </div>
+          <div class="col-lg-4 text-center">
+            <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+            <p><a href="mailto:jaepark75@gmail.com">jaepark75@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script type="text/javascript" src="{% static 'LoginReg/js/creative.min.js' %}"></script>
+
+  </body>
+
+</html>

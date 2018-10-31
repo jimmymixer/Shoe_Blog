@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Blog Post - Start Bootstrap Template</title>
+
+  {% load staticfiles %}
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="{% static 'Quotes/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'Quotes/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'Quotes/css/blog-post.css' %}">
+  <link rel="stylesheet" href="{% static 'Quotes/css/bootstrap.css' %}">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#">Welcome, {{user.name}}</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="{% url 'loginReg:index' %}">Logout</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Blog Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Blog Post -->
+
+        <!-- Title -->
+        <h1>The Men’s Dress Shoe Hierarchy</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          by <a href="#">artofmanliness.com</a>
+        </p>
+
+        <hr>
+
+        <!-- Date/Time -->
+        <p><span class="glyphicon glyphicon-time"></span> Posted on July 4, 2017 at 9:00 AM</p>
+
+        <hr>
+
+        <h3>Wholecut or Cap-Toe Oxford</h3>
+        <!-- Preview Image -->
+        {% load static %}
+        <img src="{% static "Quotes/images/dress_shoe.jpg" %}" alt="My image"/>
+
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">Wholecut or Cap-Toe Oxford</p>
+        <p>Characteristics: Oxfords that are either completely void of extra stitching, perforations, and other design elements, or darn near close. And what’s an oxford? Well first, contrary to popular belief, not all dress shoes are oxfords. On an oxford,
+          the eyelet flaps do not sit unrestrained on top of the shoe. Instead, they’re stitched over where they meet the vamp (the leather that runs from the toe to the lacing flaps) and meet up with the vamp on the same plane.</p>
+        <p>A wholecut is a shoe with an upper that is cut and fashioned from one single piece of leather. Think of wholecuts as being sheets, and other pieced-together shoes as quilts.</p>
+        <p>Meanwhile, a simple cap oxford is a shoe with closed lacing, that has a line or two of stitching that accentuates the front of the shoe, giving the toe a bit of a capped look. Bottom line: These are the most simple, sleek dress shoes. Less is
+          more. More… dressy.</p>
+        <p>What to wear it with: Tuxedos/evening wear; suits; blazer/sports coat with wool trousers; pressed, well-fitting cotton dress pants with a dress shirt and tie and/or sports coat/blazer.</p>
+
+        <hr>
+
+        <!-- Blog Comments -->
+        <!-- Comments Form -->
+        <div class="well">
+          <h4>Leave a Comment:</h4>
+          <div class="form-group">
+            <form action="{% url 'quotes:addQuote' %}" method="post" role="form">
+              {% csrf_token %}
+              <p>Quoted by: <input type="text" name="author_of_quote"></p>
+              <p>Message: <textarea name="quote_content" rows="2" cols="50"></textarea></p>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+          <!-- </form> -->
+        </div>
+
+        <hr>
+
+        <!-- Posted Comments -->
+        <!-- Comment -->
+        {% for quote in quotes %}
+        <div class="media">
+          <a class="pull-left" href="#">
+            <img class="media-object" src="http://placehold.it/64x64" alt="">
+          </a>
+          <div class="media-body">
+            <h4 class="media-heading">
+            <small>{{quote.logged_in_user.name}}</small>
+            </h4> {{quote.quote_content}}
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+
+      <!-- Blog Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Blog Search Well -->
+        <div class="well">
+          <h4>Blog Search</h4>
+          <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+          </div>
+          <!-- /.input-group -->
+        </div>
+
+        <!-- Blog Categories Well -->
+        <div class="well">
+          <h4>Blog Categories</h4>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul class="list-unstyled">
+                <li><a href="#">January 2017</a>
+                </li>
+                <li><a href="#">Febuary 2017</a>
+                </li>
+                <li><a href="#">March 2017</a>
+                </li>
+                <li><a href="#">April 2017</a>
+                </li>
+                </li>
+                <li><a href="#">May 2017</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul class="list-unstyled">
+                <li><a href="#">December 2016</a>
+                </li>
+                <li><a href="#">November 2016</a>
+                </li>
+                <li><a href="#">October 2016</a>
+                </li>
+                <li><a href="#">September 2016</a>
+                </li>
+                <li><a href="#">August 2016</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <!-- /.row -->
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright &copy; Your Website 2017</p>
+        </div>
+      </div>
+      <!-- /.row -->
+    </footer>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- jQuery -->
+  <script src="{% static 'Quotes/js/bootstrap.js' %}"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="{% static 'Quotes/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
